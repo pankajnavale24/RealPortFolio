@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
-import PortFolio from "./components/PortFolio";
+import Project from "./components/Project";
 import Experiance from "./components/Experiance";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
@@ -15,7 +15,7 @@ function App() {
         <Navbar />
         <Home />
         <About />
-        <PortFolio />
+        <Project />
         <Experiance />
         <Contact />
         <Footer />
