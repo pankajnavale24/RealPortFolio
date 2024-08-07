@@ -23,6 +23,16 @@ function About() {
             <p className="text-lg text-gray-700">Government College of Engineering, Aurangabad</p>
             <p className="text-md text-gray-500">(Expected Graduation: June 2025)</p>
           </div>
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold">CLASS XII</h3>
+            <p className="text-lg text-gray-700">Residential Junior College, Ahmednagar</p>
+            <p className="text-md text-gray-500">Class XII Percentage: 95.67%</p>
+          </div>
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold">CLASS X</h3>
+            <p className="text-lg text-gray-700">Residential High School, Ahmednagar</p>
+            <p className="text-md text-gray-500">Class X Percentage: 93.20%</p>
+          </div>
         </div>
 
         <div>

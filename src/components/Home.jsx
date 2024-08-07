@@ -2,11 +2,38 @@ import React from "react";
 import pic from "../../public/pic.png";
 import { FaGithub, FaInstagram, FaTwitter, FaLinkedin, FaNodeJs, FaReact } from "react-icons/fa";
 import { SiMongodb, SiExpress } from "react-icons/si";
-import { ReactTyped } from "react-typed"; // Check if this is a named export
+import {ReactTyped} from "react-typed";
 
 function Home() {
+  const circleStyle = {
+    width: '450px',
+    height: '450px',
+    border: '4px solid red',
+    borderRadius: '50%',
+    position: 'absolute',
+    top: '0%',
+    left: '0%',
+    transform: 'translate(-50%, -50%)',
+    animation: 'spin 10s linear infinite'
+  };
+
+  const keyframes = `
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  `;
+
+  const imageStyle = {
+    position: 'absolute',
+    width: '50px',
+    height: '50px',
+    transform: 'translate(-50%, -50%)'
+  };
+
   return (
     <>
+      <style>{keyframes}</style>
       <div
         name="Home"
         className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-28"
@@ -36,8 +63,19 @@ function Home() {
               and coding contests, always eager to learn and innovate.
             </p>
 
+            {/* Download Resume Button */}
+            <div className="px-5 py-5 m-4 text-center items-center">
+              <a
+                href="../public/Pankaj_Navale_Resume.pdf"
+                download="Pankaj_Navale_Resume.pdf"
+                className="inline-block bg-green-500 text-black py-2 px-4 rounded hover:bg-green-600"
+              >
+                Download Resume
+              </a>
+            </div>
+
             {/* Social Media Icons */}
-            <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
+            <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0 mt-6">
               <div className="space-y-2">
                 <h1 className="font-bold text-center">Available on</h1>
                 <ul className="flex space-x-5">
@@ -76,12 +114,22 @@ function Home() {
             </div>
           </div>
 
-          <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1">
-            <img
-              src={pic}
-              className="rounded-full md:w-[450px] md:h-[450px]"
-              alt="Pankaj Navale"
-            />
+          <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1 relative">
+            <div style={{ position: 'relative', width: '450px', height: '450px' }}>
+              <img
+                src={pic}
+                className="rounded-full md:w-[450px] md:h-[450px] "
+                alt="Pankaj Navale"
+                style={{ position: 'relative' }}
+              />
+             <div style={circleStyle}>
+  <SiMongodb style={{ ...imageStyle, top: '0%', left: '50%' }} className="text-3xl md:text-4xl" />
+  <SiExpress style={{ ...imageStyle, top: '50%', left: '100%' }} className="text-3xl md:text-4xl" />
+  <FaReact style={{ ...imageStyle, top: '100%', left: '50%' }} className="text-3xl md:text-4xl" />
+  <FaNodeJs style={{ ...imageStyle, top: '50%', left: '0%' }} className="text-3xl md:text-4xl" />
+</div>
+
+            </div>
           </div>
         </div>
       </div>
